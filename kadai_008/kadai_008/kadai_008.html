@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>SAMURAIニュース</title>
+        <meta name="description" content="社会・経済・スポーツ・テクノロジーの分野で、最新のニュースをお届け">
+
+        <style>
+            /* nav ul li {
+                display: inline-block;
+                margin-right: 20px;
+            } */
+
+            nav ul {
+                list-style: none;
+                padding: 0; 
+            }
+               /* display: inline-flexを使う場合（上記nav ulは共通） */
+             nav ul{
+                display: inline-flex;
+                justify-content: space-between;
+            } 
+
+            nav ul li{
+                margin-right: 20px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>SAMURAIニュース</h1>
+
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-item">
+                        <a href="https://www.sejuku.net/" class="header-nav-link">ホーム</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="https://www.sejuku.net/" class="header-nav-link">社会</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="https://www.sejuku.net/" class="header-nav-link">経済</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="https://www.sejuku.net/" class="header-nav-link">スポーツ</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="https://www.sejuku.net/" class="header-nav-link">テクノロジー</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+
+            <section class="article-social">
+                <h2>社会</h2>
+
+                <div class="article-social-txt">
+                    <h3>和菓子店も「トリックオアトリート！」</h3>
+                    <p>日本でも年々人気の高まるハロウィン。<br>今年は大手和菓子店5社がハロウィン向けの和菓子セットを共同開発しました。</p>
+                </div>
+
+                <div class="article-social-audio">
+                    <audio src="ichi.mp3" controls></audio>
+                </div>
+
+                <div class="article-social-questionnaire">
+                    <h3>私のおすすめ和菓子アンケートフォーム</h3>
+                    <form  action="データの送信先のURL">
+
+                        <label for="name">氏名</label>
+                        <input class="name-txt" type="text" placeholder="名前を入力してください" id="name">
+                        <br>
+
+                        <label for="age">年代</label>
+                        <select>
+                            <option>10代以下</option>
+                            <option>20代</option>
+                            <option>30代</option>
+                            <option>40代以上</option>
+                        </select>
+                        <!-- <input id="age"> -->
+                        <br>
+
+                        <label for="men">男性</label><input class="radio-btn" type="radio" name="gender" id="men">
+                        <label for="women">女性</label><input class="radio-btn" type="radio" name="gender" id="women">
+                        <label for="others">その他</label><input class="radio-btn" type="radio" name="gender" id="others">
+                        <br>
+
+                        <label for="japanese-sweets-name">おすすめ和菓子の名称</label>
+                        <input class="japanese-sweets-txt" type="text" placeholder="例：みたらし団子" id="japanese-sweets-name">
+                        <br>
+
+                        <label for="reason">おすすめする理由</label>
+                        <textarea></textarea>
+                        <!-- <input id="reason"> -->
+                        <br>
+
+                        <label for="privacy-policy">個人情報保護方針に同意する</label>
+                        <input class="checkbox-btn" type="checkbox" id="privacy-policy">
+                        <br>
+
+                        <input type="submit" value="送信"><input type="reset" value="リセット">
+
+                    </form>
+                </div>
+                
+            </section>
+
+            <section class="article-technology">
+                <h2>テクノロジー</h2>
+
+                <div class="article-technology-txt">
+                    <h3>SAMURAIが新しい動画をリリース</h3>
+                    <p>SAMURAI公式YouTubeで新しい動画がリリースされました。<br>動画の内容はHTML/CSSの解説です。</p>
+                </div>
+
+            </section>
+
+        </main>
+        
+        <footer>
+            <p class="footer-copy"><small>&copy;SAMURAIニュース</small></p>
+        </footer>
+    </body>
+
+</html>
