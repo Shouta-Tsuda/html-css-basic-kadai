@@ -1,0 +1,120 @@
+html{
+  font-size: 20px;
+}
+
+/* なぜルート要素のfont-sizeをbodyタグではなく、htmlタグに指定するのか？（bodyタグへの指定でも適用されているが…） */
+/* rem,vwなどを使い分ける基準とは？ */
+
+body{
+  font-family: "Arial", "Meiryo", sans-serif;
+  text-align: center;
+
+  /* 画面幅が1080pxの時、100vw=1080px=20px×54
+  font-size: calc(100vw/54); */
+
+  /* 画面幅の4%に基づき、最小で10px、最大で20px
+  font-size: clamp(10px,4vw,20px); */
+}
+
+h1{
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  letter-spacing: 1.2em;
+  text-shadow: 1px 1px 1px gray;
+  border-bottom: solid 3px rgb(115, 115, 114);
+  /* text-decoration: underline;
+  text-decoration-color: rgb(115, 115, 114);
+  text-decoration-line: 3px; */
+}
+
+
+
+.h1-character1{
+  color:  skyblue ;
+}
+
+.h1-character2{
+  color:  rgb(255, 192, 203) ;
+}
+
+/* mainをprofile-basic,profile-contentで分割する場合 */
+
+/* .profile-basic-title:nth-child(2n+1){
+  color:  rgb(255, 192, 203) ;
+}
+
+.profile-basic-title:nth-child(2n){
+  color:  skyblue ;
+}
+
+.profile-content-title:nth-child(2n+1){
+  color:  skyblue ;
+}
+
+.profile-content-title:nth-child(2n){
+  color:  rgb(255, 192, 203) ;
+} */
+
+/* mainを分割しない場合 */
+
+/* .title:nth-child(2n+1){
+  color:  rgb(255, 192, 203) ;
+}
+
+.title:nth-child(2n){
+  color:  skyblue ;
+} */
+
+/* 特定の要素指定で「nth-child」を使用も、すべてピンクに
+1,HTML内の「name-title title」⇒「title」へ変更も修正されず
+2,「.title:first-child」を加えるも、first-child（nameクラス）でも色の変化なし
+⇒titleタグが1つ特定の親要素に直下で並列されているわけではないので、childタグが適用されないのでは？ 
+⇒「title」セレクタのカラープロパティ指定で、最初にピンクを適用しているので、ピンクしか反映されていない
+⇒では、現行のHTMLコーディングでどのような変更をすれば、childタグが適用されるようになるのか？*/
+
+
+/* mainタグ内の要素を「箇条書きの項目」とみなして、ul,liタグを用いる場合 */
+/* .profile-list li:nth-child(odd) .title {
+  color: skyblue;
+}
+
+.profile-list li:nth-child(even) .title {
+  color: rgb(255,192,203);
+}
+
+.profile-list li{
+  list-style:none;
+} */
+
+
+
+.profile-basic-list li:nth-child(odd) .title {
+  color: skyblue;
+}
+
+.profile-basic-list li:nth-child(even) .title {
+  color: rgb(255,192,203);
+}
+
+.profile-basic-list li .text{
+  font-weight: bold;
+}
+
+.profile-content-list li:nth-child(odd) .title {
+  color: rgb(255,192,203);
+}
+
+.profile-content-list li:nth-child(even) .title {
+  color: skyblue;
+}
+
+.profile-basic-list li{
+  list-style:none;
+}
+
+.profile-content-list li{
+  list-style:none;
+}

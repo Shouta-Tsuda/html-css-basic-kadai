@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ポートフォリオサイト・侍太郎のプロフィール紹介ページ</title>
+    <meta name="description" content="侍太郎の趣味、好きな食べ物、プログラミングを始めた理由など、プロフィールを公開">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<!-- <body>
+    <header class="header">
+        <h1><span class="h1-character1">M</span>Y<span class="h1-character2">P</span>ROFILE</h1>
+    </header>
+
+    <main>
+      <ul class="profile-list">
+        <li>
+            <h2 class="title">名前</h2>
+            <p class="text">侍太郎</p>
+        </li>
+        <li>
+            <h2 class="title">生年月日</h2>
+            <p class="text">1990年1月1日</p>
+        </li>
+        <li>
+            <h2 class="title">血液型</h2>
+            <p class="text">O型</p>
+        </li>
+        <li>
+            <h2 class="title">趣味</h2>
+            <p class="text">旅行、読書、ゲーム</p>
+        </li>
+        <li>
+            <h2 class="title">好きな食べ物</h2>
+            <p class="text">ハンバーグ、きつねうどん、抹茶アイス</p>
+        </li>
+        <li>
+            <h2 class="title">プログラミングを始めた理由</h2>
+            <p class="text">プログラマーとして転職したいから。<br>転職して数年後にはフリーランスになって、旅行しながら仕事したい！</p>
+        </li>
+      </ul>        
+    </main>
+</body>
+</html> -->
+
+<body>
+    <header class="header">
+        <h1><span class="h1-character1">M</span>Y<span class="h1-character2">P</span>ROFILE</h1>
+    </header>
+
+    <main>
+      <ul class="profile-basic-list">
+        <li>
+            <h2 class="title">名前</h2>
+            <p class="text">侍太郎</p>
+        </li>
+        <li>
+            <h2 class="title">生年月日</h2>
+            <p class="text">1990年1月1日</p>
+        </li>
+        <li>
+            <h2 class="title">血液型</h2>
+            <p class="text">O型</p>
+        </li>
+      </ul>
+      <ul class="profile-content-list">
+        <li>
+            <h2 class="title">趣味</h2>
+            <p class="text">旅行、読書、ゲーム</p>
+        </li>
+        <li>
+            <h2 class="title">好きな食べ物</h2>
+            <p class="text">ハンバーグ、きつねうどん、抹茶アイス</p>
+        </li>
+        <li>
+            <h2 class="title">プログラミングを始めた理由</h2>
+            <p class="text">プログラマーとして転職したいから。<br>転職して数年後にはフリーランスになって、旅行しながら仕事したい！</p>
+        </li>
+      </ul>        
+    </main>
+</body>
+</html>
+
+
+
+<!-- mainをprofile-basic,profile-contentで分割する場合 -->
+
+<!-- <body>
+    <header class="header">
+        <h1><span class="h1-character1">M</span>Y<span class="h1-character2">P</span>ROFILE</h1>
+    </header>
+
+    <main>
+        <div class="profile-basic">
+            <div class="name">
+                <h2 class="name-title profile-basic-title">名前</h2>
+                <p class="name-text">侍太郎</p>
+            </div>
+            <div class="birth">
+                <h2 class="birth-title profile-basic-title">生年月日</h2>
+                <p class="birth-text">1990年1月1日</p>
+            </div>
+            <div class="bloodtype">
+                <h2 class="bloodtype-title profile-basic-title">血液型</h2>
+                <p class="bloodtype-text">O型</p>
+            </div>
+        </div>
+
+        <div class="profile-content">
+            <div class="hobby">
+                <h2 class="hobby-title profile-content-title">趣味</h2>
+                <p class="hobby-text">旅行、読書、ゲーム</p>
+            </div>
+            <div class="favoritefood">
+                <h2 class="favoritefood-title profile-content-title">好きな食べ物</h2>
+                <p class="favoritefood-text">ハンバーグ、きつねうどん、抹茶アイス</p>
+            </div>
+            <div class="programming">
+                <h2 class="programming-title profile-content-title">プログラミングを始めた理由</h2>
+                <p class="programming-text">プログラマーとして転職したいから。<br>転職して数年後にはフリーランスになって、旅行しながら仕事したい！</p>
+            </div>
+        </div>
+        
+    </main>
+</body> -->
+
+
+<!-- mainを分割しない場合 -->
+
+<!-- <body>
+    <header class="header">
+        <h1><span class="h1-character1">M</span>Y<span class="h1-character2">P</span>ROFILE</h1>
+    </header>
+
+    <main class="profile">
+        <div class="name">
+            <h2 class="name-title title">名前</h2>
+            <p class="name-text">侍太郎</p>
+        </div>
+        <div class="birth">
+            <h2 class="birth-title title">生年月日</h2>
+            <p class="birth-text">1990年1月1日</p>
+        </div>
+        <div class="bloodtype">
+            <h2 class="bloodtype-title title">血液型</h2>
+            <p class="bloodtype-text">O型</p>
+        </div>
+        <div class="hobby">
+            <h2 class="hobby-title title">趣味</h2>
+            <p class="hobby-text">旅行、読書、ゲーム</p>
+        </div>
+        <div class="favoritefood">
+            <h2 class="favoritefood-title title">好きな食べ物</h2>
+            <p class="favoritefood-text">ハンバーグ、きつねうどん、抹茶アイス</p>
+        </div>
+        <div class="programming">
+            <h2 class="programming-title title">プログラミングを始めた理由</h2>
+            <p class="programming-text">プログラマーとして転職したいから。<br>転職して数年後にはフリーランスになって、旅行しながら仕事したい！</p>
+        </div>
+        
+    </main>
+</body> -->
+
+<!-- mainをprofile-basic,profile-contentで分割する場合において、
+・より適切なクラス名は無いのか？ favoritefood,programming,-titleなどへの改善案で -->
+
+
+<!-- mainを分割しない場合において、
+・title装飾のCSSコーディングを簡潔化させる目的で、profile-basic,profile-contentのdivクラスを除外
+・h2,pのクラス名の付け方で、単に「title」「text」だとダメだと感じた -->
