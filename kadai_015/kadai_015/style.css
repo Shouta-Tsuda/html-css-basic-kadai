@@ -91,11 +91,11 @@ h1{
 
 
 
-.profile-basic-list li:nth-child(odd) .title {
+.profile-basic-list li:nth-child(2n) .title {
   color: skyblue;
 }
 
-.profile-basic-list li:nth-child(even) .title {
+.profile-basic-list li:nth-child(2n+1) .title {
   color: rgb(255,192,203);
 }
 
@@ -103,11 +103,11 @@ h1{
   font-weight: bold;
 }
 
-.profile-content-list li:nth-child(odd) .title {
+.profile-content-list li:nth-child(2n) .title {
   color: rgb(255,192,203);
 }
 
-.profile-content-list li:nth-child(even) .title {
+.profile-content-list li:nth-child(2n+1) .title {
   color: skyblue;
 }
 
@@ -117,4 +117,16 @@ h1{
 
 .profile-content-list li{
   list-style:none;
+}
+
+:root{
+  --font-size:1rem;
+  --line-height:1.4
+}
+
+li{
+  line-height: var(--line-height)
+  padding: calc(
+    30px-(var(--font-size) * var(--line-height) - var(--font-size)) /2 
+   )0;
 }
