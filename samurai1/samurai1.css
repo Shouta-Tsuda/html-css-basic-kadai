@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
+.google-fonts {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.paragraph{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-paragraph{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  width: 100px;
+  height: 100px;
+  background-color: #fff037;
+}
+.second-paragraph{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 5px #000000;
+  width: 100px;
+  height: 100px;
+  background-color: #1d2cb3;
+}
+.third-paragraph{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: #cf1685;
+}
+
+.paragraph-text + .paragraph-text {
+  margin-left: 30px;
+}
