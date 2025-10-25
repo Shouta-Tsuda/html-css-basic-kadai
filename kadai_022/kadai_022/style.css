@@ -64,7 +64,7 @@ main{
     color: rgb(239, 111, 139);
 }
 
-.weather-text:nth-of-type(2n)::first-letter{
+.weather-wrapper .weather-text:nth-of-type(2n)::first-letter{
     font-weight: bold;
     color: rgb(97, 206, 249);
 }
@@ -85,7 +85,7 @@ footer{
     background-color: rgb(244, 79, 79);
 }
 
-.footer-copy{
+footer-copy{
     color: rgb(255, 255, 255);
     margin: 0;
 }
