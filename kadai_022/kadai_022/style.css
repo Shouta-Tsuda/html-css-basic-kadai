@@ -4,14 +4,13 @@
     box-sizing: border-box;
 }
 
-/* * {
+* {
   margin: 0;
-} */
+}
 
 body{
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
-    margin: 0;
 }
 
 p, h1, h2 {
@@ -20,33 +19,35 @@ p, h1, h2 {
 
 p{
     font-size: 20px;
-    margin: 0;
 }
 
 /* header部分 */
 
 header{
-    margin-bottom: 20px;
     background-color: rgb(244, 79, 79);
     text-align: center;
 }
 
 .header-text{
-    margin: 0;
+    /* margin: 0; */
     color: rgb(255, 255, 255);
 }
 
-/* mainの部分 */
+
+
+/* mainの部分（横4×縦3） */
 
 main{
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
 }
 
 .weather-wrapper{
     border: solid 3px rgb(238, 204, 204);
-    flex-basis: 25%;
+    flex-basis: 17.5%;
     padding: 10px 15px;
     margin: 20px 0;
     text-align: center;
@@ -54,9 +55,16 @@ main{
     justify-items: center; */
 }
 
+.weather-wrapper:nth-child(4n),
+.weather-wrapper:nth-child(4n+2),
+.weather-wrapper:nth-child(4n+3){
+    margin-left: 10%;
+}
+
 .weather-title{
     font-size: 25px;
     border-bottom: dotted 3px rgb(236, 122, 122);
+    margin-bottom: 10px;
 }
 
 .weather-title::before{
@@ -68,10 +76,6 @@ main{
     font-weight: bold;
     color: rgb(97, 206, 249);
 }
-
-/* .weather-text{
-    line-height: 1.5;
-} */
 
 .weather-image{
     margin: 10px 0;
@@ -85,20 +89,79 @@ footer{
     background-color: rgb(244, 79, 79);
 }
 
-footer-copy{
+.footer-copy a{
     color: rgb(255, 255, 255);
-    margin: 0;
+    /* margin: 10px 0; */
 }
 
-a:visited{
+.footer-copy a:visited{
     color: rgb(193, 234, 251);
 }
 
-a:hover{
+.footer-copy a:hover{
     color:rgb(245, 178, 168)
 }
 
-@media screen and (max-width:768px) {
+
+/* タブレット対象のブレイクポイント1（横3×縦4） */
+@media screen and (min-width:768px) and (max-width:1080px){
+    .weather-title{
+    font-size: 30px;
+    }
+
+    p{
+    font-size: 25px;
+    }
+
+    .weather-wrapper{
+    margin-left: 0;
+    margin-right: 0;
+    flex-basis: 30%;
+    }
+
+    .weather-wrapper:nth-child(4n),
+    .weather-wrapper:nth-child(4n+2),
+    .weather-wrapper:nth-child(4n+3){
+    margin-left: 0;
+    }
+
+    /* なぜ.weather-wrapper:nth-child(3n), .weather-wrapper:nth-child(4n+2)でmargin-left:5%を指定しなくても3列になるのか？ */
+    /* 4列の場合は、.weather-wrapper:nth-child…でmargin-leftを指定しないと、型崩れを起こす */
+
+}
+
+
+/* タブレット対象のブレイクポイント2（横2×縦6） */
+@media screen and (min-width:428px) and (max-width:768px) {
+    .weather-title{
+    font-size: 30px;
+    }
+
+    p{
+    font-size: 25px;
+    }
+
+    .weather-wrapper{
+    margin-left: 0;
+    margin-right: 0;
+    flex-basis: 45%;
+    }
+
+    /* .weather-wrapper:nth-child(2n){
+    margin-left: 20%;
+    } */
+    .weather-wrapper:nth-child(4n),
+    .weather-wrapper:nth-child(4n+2),
+    .weather-wrapper:nth-child(4n+3){
+    margin-left: 0;
+    }
+
+}
+
+
+
+/* スマートフォン対象のブレイクポイント（横1×縦12） */
+@media screen and (max-width:428px) {
     .weather-title{
     font-size: 30px;
     }
@@ -108,7 +171,20 @@ a:hover{
     }
 
     main{
-    display: grid;
+    display: block;
+    /* display: grid; */
+    }
+
+    .weather-wrapper{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    }
+
+    .weather-wrapper:nth-child(4n),
+    .weather-wrapper:nth-child(4n+2),
+    .weather-wrapper:nth-child(4n+3){
+    margin-left: 0;
     }
 
 }
